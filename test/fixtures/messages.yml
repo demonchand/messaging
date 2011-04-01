@@ -1,0 +1,17 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  from: MyString
+  to: MyString
+  subject: MyString
+  body: MyText
+  date: 2011-04-01 12:57:11
+  status: MyString
+
+two:
+  from: MyString
+  to: MyString
+  subject: MyString
+  body: MyText
+  date: 2011-04-01 12:57:11
+  status: MyString

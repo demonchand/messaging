@@ -1,4 +1,6 @@
 Messaging::Application.routes.draw do
+  resources :messages
+
   get "home/index"
 
   devise_for :users
