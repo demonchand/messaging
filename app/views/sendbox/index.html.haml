@@ -1,2 +1,16 @@
-%h1 Sendbox#index
-%p Find me in app/views/sendbox/index.html.haml
+%h1 Send Items
+
+%table{:cellpadding => 5, :border => 1}
+  %tr
+    %th To
+    %th Subject
+    %th Date
+    %th
+    %th
+    - @send_items.each do |x|
+      %tr
+        %td= x.to
+        %td= x.subject
+        %td= x.date
+        %td= link_to "View Message"
+        %td= link_to "Delete"
