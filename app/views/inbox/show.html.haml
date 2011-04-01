@@ -1,2 +1,18 @@
-%h1 Inbox#show
-%p Find me in app/views/inbox/show.html.haml
+%h1 Your Message
+
+/ = @inbox.form
+/ = @exe
+%p 
+  From : 
+  = @from
+%p 
+  Subject :
+  = @subject
+%p 
+  Body :
+  =  @body
+%p
+  Date :
+  = @date
+
+= link_to "Back to inbox", "/inbox"

@@ -2,6 +2,8 @@ Messaging::Application.routes.draw do
   get "inbox/index"
 
   get "inbox/show"
+  match "inbox/:id", :to => "inbox#show"
+  match "inbox", :to => "inbox#index"
 
   get "inbox/destroy"
 

@@ -1,5 +1,4 @@
 %h1 Inbox
-= @sample
 
 %table{:cellpadding => 5, :border => 1 }
   %tr
@@ -11,6 +10,6 @@
       %tr
         %td= x.from
         %td= x.subject
-        %td= link_to "View", '/inbox/show'
+        %td= link_to "View", "/inbox/#{x.id}"
         %td= link_to "destroy" 
         
