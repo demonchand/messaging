@@ -1,2 +1,17 @@
-%h1 Sendbox#show
-%p Find me in app/views/sendbox/show.html.haml
+%h1 Show mail
+
+= @send_item
+%p
+  To : 
+  = @send_item.from
+%p
+  Date :
+  = @send_item.date
+%p
+  Subject :
+  = @send_item.subject
+%p
+  Body :
+  = @send_item.body
+
+
