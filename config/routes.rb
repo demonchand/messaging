@@ -1,4 +1,10 @@
 Messaging::Application.routes.draw do
+  get "inbox/index"
+
+  get "inbox/show"
+
+  get "inbox/destroy"
+
   resources :messages
 
   get "home/index"
