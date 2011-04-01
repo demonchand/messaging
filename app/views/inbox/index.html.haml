@@ -1,2 +1,16 @@
-%h1 Inbox#index
-%p Find me in app/views/inbox/index.html.haml
+%h1 Inbox
+= @sample
+
+%table{:cellpadding => 5, :border => 1 }
+  %tr
+    %th From
+    %th Subject
+    %th
+    %th
+    - @sample.each do |x|
+      %tr
+        %td= x.from
+        %td= x.subject
+        %td= link_to "View", '/inbox/show'
+        %td= link_to "destroy" 
+        
