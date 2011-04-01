@@ -7,8 +7,9 @@ gem 'rails', '3.0.5'
 
 gem 'mysql2'
 gem 'devise'
-gem 'haml'
+gem 'haml' # This gem is not accepted for rails generators
 gem 'formtastic'
+gem 'haml-rails'
 
 
 # Use unicorn as the web server
