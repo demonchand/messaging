@@ -14,6 +14,12 @@ class InboxController < ApplicationController
   end
 
   def destroy
+    @inb = Message.find(params[:id])
+    @inb.destroy
+
+    respond_to do |format|
+      format.html { redirect_to '/index' }
+    end
   end
 
 end

@@ -11,5 +11,5 @@
         %td= x.from
         %td= x.subject
         %td= link_to "View", "/inbox/#{x.id}"
-        %td= link_to "destroy" 
+        %td= link_to "destroy",x, :confirm => "Did you sure about that", :method => :delete
         
