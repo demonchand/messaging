@@ -10,6 +10,8 @@ gem 'devise'
 gem 'haml' # This gem is not accepted for rails generators
 gem 'formtastic'
 gem 'haml-rails'
+gem 'sms_fu'
+gem 'pony'
 
 
 # Use unicorn as the web server
