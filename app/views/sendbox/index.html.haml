@@ -13,4 +13,4 @@
         %td= x.subject
         %td= x.date
         %td= link_to "View Message", "/sendbox/#{x.id}"
-        %td= link_to "Delete"
+        %td= link_to "Delete", x, :confirm => "are you sure", :method => :delete

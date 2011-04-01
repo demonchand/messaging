@@ -1,5 +1,6 @@
 Messaging::Application.routes.draw do
   get "sendbox/index"
+  get "sendbox/destroy"
   match "sendbox/:id", :to => "sendbox#show"
 
 

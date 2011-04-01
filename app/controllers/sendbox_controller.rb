@@ -8,6 +8,12 @@ class SendboxController < ApplicationController
   end
 
   def destroy
+    @send = Message.find(params[:id])
+    @send.destroy
+
+    respond_to do |format|
+      format.html {redirect_to '/sendbox' }
+    end
   end
 
 end
