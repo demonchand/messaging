@@ -1,0 +1,2 @@
+module SendboxHelper
+end

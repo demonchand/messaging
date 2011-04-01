@@ -1,4 +1,10 @@
 Messaging::Application.routes.draw do
+  get "sendbox/index"
+
+  get "sendbox/show"
+
+  get "sendbox/destroy"
+
   get "inbox/index"
 
   get "inbox/show"
