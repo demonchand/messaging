@@ -6,11 +6,6 @@ class InboxController < ApplicationController
 
   def show
     @exe = Message.find(params[:id])
-    @from = @exe.from
-    @date = @exe.date
-    @subject = @exe.subject
-    @body = @exe.body
-    
   end
 
   def destroy
