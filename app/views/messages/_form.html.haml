@@ -1,28 +1,9 @@
-= form_for @message do |f|
-  -if @message.errors.any?
-    #error_explanation
-      %h2= "#{pluralize(@message.errors.count, "error")} prohibited this message from being saved:"
-      %ul
-        - @message.errors.full_messages.each do |msg|
-          %li= msg
+= semantic_form_for @message do |f|
+  = f.inputs do 
+    = f.input :from 
+    = f.input :to 
+    = f.input :subject
+    = f.input :body 
+    = f.input :date, :as => :hidden, :value => Time.now
+    = f.input :status, :as => :radio, :collection => [ "Read", "Unread" ] 
 
-  .field
-    = f.label :from
-    = f.text_field :from
-  .field
-    = f.label :to
-    = f.text_field :to
-  .field
-    = f.label :subject
-    = f.text_field :subject
-  .field
-    = f.label :body
-    = f.text_area :body
-  .field
-    = f.label :date
-    = f.datetime_select :date
-  .field
-    = f.label :status
-    = f.text_field :status
-  .actions
-    = f.submit 'Save'
