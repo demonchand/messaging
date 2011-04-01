@@ -1,9 +1,9 @@
 = semantic_form_for @message do |f|
   = f.inputs do 
-    = f.input :from 
+    = f.input :from, :as => :hidden, :value => current_user.email 
     = f.input :to 
     = f.input :subject
     = f.input :body 
     = f.input :date, :as => :hidden, :value => Time.now
     = f.input :status, :as => :radio, :collection => [ "Read", "Unread" ] 
-
+  = f.buttons
