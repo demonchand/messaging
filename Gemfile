@@ -12,6 +12,8 @@ gem 'formtastic'
 gem 'haml-rails'
 gem 'sms_fu'
 gem 'pony'
+gem 'hpricot'
+gem 'ruby_parser'
 
 
 # Use unicorn as the web server
