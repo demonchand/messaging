@@ -13,7 +13,8 @@
     <%= link_to "Create Message", new_message_path %> |
     <%= link_to "Inbox", '/inbox/index' %> |
     <%= link_to "Send", '/sendbox/index' %> |
-    <%= current_user.email %>
+    <%#= current_user.email %>
+    <%= link_to "My settings", edit_user_registration_path %> |
     <%= link_to "Sign Out", destroy_user_session_path %>
     <% else %>
     <% end %>
