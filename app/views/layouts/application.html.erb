@@ -9,7 +9,7 @@
   <body>
     <% if user_signed_in? %>
     <%= link_to "Home", root_url %> |
-    <%#= link_to "Message", messages_path %> |
+<!--    <%#= link_to "Message", messages_path %> | -->
     <%= link_to "Create Message", new_message_path %> |
     <%= link_to "Inbox", '/inbox/index' %> |
     <%= link_to "Send", '/sendbox/index' %> |
