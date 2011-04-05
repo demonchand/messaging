@@ -1,0 +1,27 @@
+%h1 Listing cashflows
+
+%table
+  %tr
+    %th From
+    %th To
+    %th Amount
+    %th Date
+    %th Description
+    %th
+    %th
+    %th
+
+  - @cashflows.each do |cashflow|
+    %tr
+      %td= cashflow.from
+      %td= cashflow.to
+      %td= cashflow.amount
+      %td= cashflow.date
+      %td= cashflow.description
+      %td= link_to 'Show', cashflow
+      %td= link_to 'Edit', edit_cashflow_path(cashflow)
+      %td= link_to 'Destroy', cashflow, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New Cashflow', new_cashflow_path
