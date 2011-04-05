@@ -1,4 +1,6 @@
 Messaging::Application.routes.draw do
+  resources :journals
+
   resources :accounts
 
   resources :expenses

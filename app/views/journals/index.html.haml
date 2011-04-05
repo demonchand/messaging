@@ -1,0 +1,27 @@
+%h1 Listing journals
+
+%table
+  %tr
+    %th From
+    %th To
+    %th Description
+    %th Amount
+    %th Date
+    %th
+    %th
+    %th
+
+  - @journals.each do |journal|
+    %tr
+      %td= journal.from
+      %td= journal.to
+      %td= journal.description
+      %td= journal.amount
+      %td= journal.date
+      %td= link_to 'Show', journal
+      %td= link_to 'Edit', edit_journal_path(journal)
+      %td= link_to 'Destroy', journal, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New Journal', new_journal_path

@@ -1,0 +1,21 @@
+%p#notice= notice
+
+%p
+  %b From:
+  = @journal.from
+%p
+  %b To:
+  = @journal.to
+%p
+  %b Description:
+  = @journal.description
+%p
+  %b Amount:
+  = @journal.amount
+%p
+  %b Date:
+  = @journal.date
+
+= link_to 'Edit', edit_journal_path(@journal)
+\|
+= link_to 'Back', journals_path

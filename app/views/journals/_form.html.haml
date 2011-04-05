@@ -1,0 +1,8 @@
+= semantic_form_for @journal do |f|
+  = f.inputs do
+    = f.input :from, :as => :select, :collection =>  Account.all
+    = f.input :to, :as => :select, :collection =>  Account.all
+    = f.input :description
+    = f.input :amount
+    = f.input :date
+  = f.buttons
