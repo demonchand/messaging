@@ -1,4 +1,6 @@
 Messaging::Application.routes.draw do
+  resources :expenses
+
   resources :assert_accounts
 
   get "sendbox/index"
