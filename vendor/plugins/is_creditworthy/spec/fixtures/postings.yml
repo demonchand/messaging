@@ -1,0 +1,14 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  journal: 
+  account: 
+  cents: 1
+  currency: USD
+
+two:
+  journal: 
+  account: 
+  cents: 1
+  currency: USD
+

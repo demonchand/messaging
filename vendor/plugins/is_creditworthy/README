@@ -1,0 +1,41 @@
+IsCreditworthy
+==============
+
+Introduction goes here.
+
+
+Example
+=======
+
+class IsCreditworthyTest < ActiveRecord::Base
+  is_creditworthy
+end
+
+> ict = IsCreditworthyTest.create   # get instance of model
+> ac= ict.accounts.first            # get the automatically created first account of the model
+> cb= Account.cashbook              # get the global cashbook to have a second account
+
+> cb.transfer ac, 100               # transfer 100 credits from the cashbook to the model's account
+
+> cb.balance                        # show the cashbook's balance
+=> -100
+
+> ac.balance                        # show the account's balance
+=> 100
+
+> ict.accounts.total_balance        # show the model's total balance
+=> 100
+
+> ac2 = Account.create              # create another external account
+> ac2.transfer ac, 12               # transfer 12 credits from that account to the model's one
+
+> ac.balance
+=> 112
+> ac2.balance
+=> -12
+> ict.accounts.total_balance
+=> 112
+
+
+
+Copyright (c) 2009 Alex Peuchert, released under the MIT license
