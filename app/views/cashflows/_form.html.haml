@@ -1,25 +1,9 @@
-= form_for @cashflow do |f|
-  -if @cashflow.errors.any?
-    #error_explanation
-      %h2= "#{pluralize(@cashflow.errors.count, "error")} prohibited this cashflow from being saved:"
-      %ul
-        - @cashflow.errors.full_messages.each do |msg|
-          %li= msg
-
-  .field
-    = f.label :from
-    = f.text_field :from
-  .field
-    = f.label :to
-    = f.text_field :to
-  .field
-    = f.label :amount
-    = f.text_field :amount
-  .field
-    = f.label :date
-    = f.date_select :date
-  .field
-    = f.label :description
-    = f.text_area :description
-  .actions
-    = f.submit 'Save'
+= semantic_form_for @cashflow do |f|
+  = f.inputs do 
+    = f.input :from, :as => :select, :collection => [ [AssertAccount.all], [Expense.all]  ]
+    = f.input :to, :as => :select, :collection => [ [AssertAccount.all], [Expense.all]  ]
+    = f.input :amount 
+    = f.input :date 
+    = f.input :description 
+  = f.buttons
+  
