@@ -1,0 +1,9 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @assert_account.name
+
+= link_to 'Edit', edit_assert_account_path(@assert_account)
+\|
+= link_to 'Back', assert_accounts_path

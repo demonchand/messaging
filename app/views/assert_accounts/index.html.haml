@@ -1,0 +1,19 @@
+%h1 Listing assert_accounts
+
+%table
+  %tr
+    %th Name
+    %th
+    %th
+    %th
+
+  - @assert_accounts.each do |assert_account|
+    %tr
+      %td= assert_account.name
+      %td= link_to 'Show', assert_account
+      %td= link_to 'Edit', edit_assert_account_path(assert_account)
+      %td= link_to 'Destroy', assert_account, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New Assert account', new_assert_account_path
