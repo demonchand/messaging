@@ -1,9 +1,0 @@
-Description:
-    The migration generator creates a migration to add the is_creditworthy tables to your database and takes no arguments.
- 
-Example:
-    ./script/generate is_creditworthy_migration  
-
-  Migration: db/migrate/add_is_creditworthy_table.rb
-  The models live in the lib directory of this plugin.
-
