@@ -10,10 +10,28 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110405062518) do
+ActiveRecord::Schema.define(:version => 20110405091609) do
+
+  create_table "accounts", :force => true do |t|
+    t.string   "account_type"
+    t.decimal  "balance",      :precision => 10, :scale => 2
+    t.date     "date"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "assert_accounts", :force => true do |t|
     t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "cashflows", :force => true do |t|
+    t.string   "from"
+    t.string   "to"
+    t.decimal  "amount",      :precision => 10, :scale => 2
+    t.date     "date"
+    t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

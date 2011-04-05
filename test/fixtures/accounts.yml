@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  account_type: MyString
+  balance: 9.99
+  date: 2011-04-05
+
+two:
+  account_type: MyString
+  balance: 9.99
+  date: 2011-04-05

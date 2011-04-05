@@ -1,4 +1,6 @@
 Messaging::Application.routes.draw do
+  resources :accounts
+
   resources :expenses
 
   resources :assert_accounts
