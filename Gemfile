@@ -14,6 +14,7 @@ gem 'sms_fu'
 gem 'pony'
 gem 'hpricot'
 gem 'ruby_parser'
+gem 'money'
 
 
 # Use unicorn as the web server
