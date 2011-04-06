@@ -8,3 +8,7 @@
 user1 = User.create(:email => "abc@gmail.com", :password => "123456", :password_confirmation => "123456")
 user2 = User.create(:email => "123@gmail.com", :password => "123456", :password_confirmation => "123456")
 
+account_names = [ "assert account", "liability account", "owners capital account", "revenue account", "expense account", "withdrawal account" ]
+account_names.each do |x|
+  Account.create!(:account_type => x, :balance => 0, :date => Time.now)
+end
