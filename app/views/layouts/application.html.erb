@@ -17,13 +17,13 @@
     <%= link_to "My settings", edit_user_registration_path %> |
     <%= link_to "Sign Out", destroy_user_session_path %>
     Currently singned in as :    <%= current_user.email %>
-    <% else %>
-    <% end %>
-
-    <%= yield %>
-    
-    |  <%= link_to "Accounts", accounts_path %> |
+    <%= link_to "Accounts", accounts_path %> |
     <%= link_to "journals", journals_path %> |
     <%= link_to "Journal Entries", '/book_of_entry/index' %>
+    <% else %>
+    <% end %>
+    
+    <%= yield %>
+    
   </body>
 </html>
