@@ -10,7 +10,11 @@
       %td= x.date
       %td= Account.find(x.to.to_i).account_type
       %td= number_to_currency(x.amount)
+      %td= ""
       %tr
         %td= x.date
         %td= Account.find(x.from.to_i).account_type
+        %td= ""
+        %td= number_to_currency(x.amount)
+        %tr
    

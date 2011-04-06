@@ -26,16 +26,6 @@ ActiveRecord::Schema.define(:version => 20110405093532) do
     t.datetime "updated_at"
   end
 
-  create_table "cashflows", :force => true do |t|
-    t.string   "from"
-    t.string   "to"
-    t.decimal  "amount",      :precision => 10, :scale => 2
-    t.date     "date"
-    t.text     "description"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "expenses", :force => true do |t|
     t.string   "name"
     t.datetime "created_at"
