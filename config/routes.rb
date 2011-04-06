@@ -1,4 +1,6 @@
 Messaging::Application.routes.draw do
+  get "book_of_entry/index"
+
   resources :journals
 
   resources :accounts
